@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Just One Question ❤️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd6e0, #ff9a9e);
+      text-align: center;
+      padding: 20px;
+    }
+    h2 {
+      color: #7a003c;
+    }
+    img {
+      max-width: 90%;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+    .buttons {
+      margin-top: 25px;
+    }
+    button {
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ff4d88;
+      color: white;
+    }
+    button:hover {
+      background-color: #e6005c;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h2>Do you know this guy? 👀</h2>
+    <img src="image1.jpg" alt="Image 1">
+    <div class="buttons">
+      <button onclick="yesAnswer()">Yes</button>
+      <button onclick="noAnswer()">No</button>
+    </div>
+  </div>
+
+  <script>
+    function yesAnswer() {
+      document.getElementById("content").innerHTML = `
+        <h2>I knew it 😌❤️</h2>
+        <img src="image2.webp" alt="Cute Gif">
+      `;
+    }
+
+    function noAnswer() {
+      document.getElementById("content").innerHTML = `
+        <h2>Hmm… try again 😏</h2>
+        <img src="image3.gif" alt="Try Again">
+        <div class="buttons">
+          <button onclick="location.reload()">Try Again</button>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
